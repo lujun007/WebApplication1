@@ -6,7 +6,7 @@ namespace ConsoleApp1
 {
     class Program
     {
-        
+
         static void Main(string[] args)
         {
             #region 数组
@@ -76,19 +76,20 @@ namespace ConsoleApp1
             //Console.ReadKey();
             #endregion
 
-            #region 二叉树
-            #region
-            /*
-             *                  A
-             *                 /  \  
-             *               B      C  
-             *              / \      \
-             *             D   E      F
-             *            /     \
-             *           G       H 
-             */
-            #endregion
+            #region 二叉查询树
             BinaryTree binaryTree = new BinaryTree();
+            //for (var i = 0; i < 5; i++)
+            //{
+            //    Random random = new Random();
+            //    int num = random.Next(0, 100);
+            //    binaryTree.Add(num);
+            //}
+            binaryTree.Add(5);
+            binaryTree.Add(6);
+            binaryTree.Add(7);
+            binaryTree.Add(4);
+            binaryTree.Add(3);
+
             binaryTree.Preorder();
             #endregion
 
@@ -167,7 +168,7 @@ namespace ConsoleApp1
                 if (index < _size / 2)//正向查找
                 {
                     BdNode<T> node = _linkHead.Next;
-                    for(int i = 0; i < index; i++)
+                    for (int i = 0; i < index; i++)
                     {
                         node = node.Next;
                     }
@@ -176,7 +177,7 @@ namespace ConsoleApp1
                 //方向查询
                 BdNode<T> rnode = _linkHead.Prev;
                 int rindex = _size - index - 1;
-                for(int i = 0; i < rindex; i++)
+                for (int i = 0; i < rindex; i++)
                 {
                     rnode = rnode.Prev;
                 }
@@ -190,7 +191,7 @@ namespace ConsoleApp1
             public T GetLast() => GetNode(_size - 1).Data;
 
             // 将节点插入到第index位置之前
-            public void Insert(int index,T t)
+            public void Insert(int index, T t)
             {
                 if (_size < 1 || index >= _size)
                 {
@@ -211,7 +212,7 @@ namespace ConsoleApp1
             }
 
             //追加到index位置之后
-            public void Append(int index,T t)
+            public void Append(int index, T t)
             {
                 BdNode<T> inode;
                 if (index == 0)
@@ -255,7 +256,7 @@ namespace ConsoleApp1
         }
 
         #endregion
-        
+
     }
 
     public class Cat
@@ -275,7 +276,7 @@ namespace ConsoleApp1
         }
         public void info()
         {
-            
+
         }
     }
 }
