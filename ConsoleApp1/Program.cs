@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Unity;
 
 namespace ConsoleApp1
 {
@@ -13,59 +9,87 @@ namespace ConsoleApp1
         
         static void Main(string[] args)
         {
-            #region 二叉树
-            //Tree tree = new Tree() { Value="A"};
-            //tree.Left = new Tree()
+            #region 数组
+            //ArrayList num = new ArrayList();
+            //num.Add("a");
+            //num.Add("b");
+            //num.Add("c");
+            //foreach(var item in num)
             //{
-            //    Value = "B",
-            //    Left = new Tree() { Value = "D", Left = new Tree() { Value = "G" } },
-            //    Right = new Tree() { Value = "E", Right = new Tree() { Value = "H" } }
-            //};
-            //tree.Right = new Tree() { Value = "C", Right = new Tree() { Value = "F" } };
-
-            //PreOrder(tree);
-
-            //System.Console.ReadLine();
+            //    Console.WriteLine(num.IndexOf(item) + ":" + item);
+            //}
+            //Console.WriteLine(num.Capacity);
+            //Console.WriteLine(num.Count);
+            //num.Add("d");
+            //num.Add("e");
+            //num.Add("f");
+            //foreach (var item in num)
+            //{
+            //    Console.WriteLine(num.IndexOf(item) + ":" + item);
+            //}
+            //Console.WriteLine(num.Capacity);
+            //Console.WriteLine(num.Count);
+            //num.Remove("f");
+            //num.Remove("e");
+            //num.Remove("d");
+            //Console.WriteLine(num.Capacity);
+            //Console.WriteLine(num.Count);
             #endregion
 
             #region 双向链表
-            LinkedList<string> linked = new LinkedList<string>();
-            linked.AddFirst("a");
-            linked.AddFirst("b");
-            linked.AddFirst("c");
-            linked.AddLast("d");
+            //LinkedList<string> linked = new LinkedList<string>();
+            //linked.AddFirst("a");
+            //linked.AddFirst("b");
+            //linked.AddFirst("c");
+            //linked.AddLast("d");
 
-            foreach(var item in linked)
-            {
-                Console.WriteLine(item);
-            }
+            //foreach(var item in linked)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
-            DoubleLink<int> dlink = new DoubleLink<int>();// 创建双向链表
-            Console.WriteLine("将 20 插入到表头之后");
-            dlink.Append(0, 10);
-            dlink.ShowAll();
-            Console.WriteLine("将 40 插入到表头之后");
-            dlink.Append(1, 30);
-            dlink.ShowAll();
-            Console.WriteLine("将 10 插入到表头之前");
-            dlink.Insert(0, 40);
-            dlink.ShowAll();
-            Console.WriteLine("将 30 插入到第一个位置之前");
-            dlink.Insert(1, 20);
-            dlink.ShowAll();
+            //DoubleLink<int> dlink = new DoubleLink<int>();// 创建双向链表
+            //Console.WriteLine("将 20 插入到表头之后");
+            //dlink.Append(0, 10);
+            //dlink.ShowAll();
+            //Console.WriteLine("将 40 插入到表头之后");
+            //dlink.Append(1, 30);
+            //dlink.ShowAll();
+            //Console.WriteLine("将 10 插入到表头之前");
+            //dlink.Insert(0, 40);
+            //dlink.ShowAll();
+            //Console.WriteLine("将 30 插入到第一个位置之前");
+            //dlink.Insert(1, 20);
+            //dlink.ShowAll();
 
-            dlink.Insert(2, 25);
-            dlink.ShowAll();
-            Console.WriteLine("展示第一个:" + dlink.GetFirst());
-            Console.WriteLine("删除第一个");
-            dlink.DelFirst();
-            Console.WriteLine("展示第一个:" + dlink.GetFirst());
-            Console.WriteLine("展示最后一个:" + dlink.GetLast());
-            Console.WriteLine("删除最后一个");
-            dlink.DelLast();
-            Console.WriteLine("展示最后一个:" + dlink.GetLast());
-            dlink.ShowAll();
-            Console.ReadKey();
+            //dlink.Insert(2, 25);
+            //dlink.ShowAll();
+            //Console.WriteLine("展示第一个:" + dlink.GetFirst());
+            //Console.WriteLine("删除第一个");
+            //dlink.DelFirst();
+            //Console.WriteLine("展示第一个:" + dlink.GetFirst());
+            //Console.WriteLine("展示最后一个:" + dlink.GetLast());
+            //Console.WriteLine("删除最后一个");
+            //dlink.DelLast();
+            //Console.WriteLine("展示最后一个:" + dlink.GetLast());
+            //dlink.ShowAll();
+            //Console.ReadKey();
+            #endregion
+
+            #region 二叉树
+            #region
+            /*
+             *                  A
+             *                 /  \  
+             *               B      C  
+             *              / \      \
+             *             D   E      F
+             *            /     \
+             *           G       H 
+             */
+            #endregion
+            BinaryTree binaryTree = new BinaryTree();
+            binaryTree.Preorder();
             #endregion
 
             #region Hash一致性
@@ -84,37 +108,9 @@ namespace ConsoleApp1
             //Console.ReadLine();
             #endregion
 
-            #region 数组
-            ArrayList num = new ArrayList();
-            num.Add("a");
-            num.Add("b");
-            num.Add("c");
-            foreach(var item in num)
-            {
-                Console.WriteLine(num.IndexOf(item) + ":" + item);
-            }
-            Console.WriteLine(num.Capacity);
-            Console.WriteLine(num.Count);
-            num.Add("d");
-            num.Add("e");
-            num.Add("f");
-            foreach (var item in num)
-            {
-                Console.WriteLine(num.IndexOf(item) + ":" + item);
-            }
-            Console.WriteLine(num.Capacity);
-            Console.WriteLine(num.Count);
-            num.Remove("f");
-            num.Remove("e");
-            num.Remove("d");
-            Console.WriteLine(num.Capacity);
-            Console.WriteLine(num.Count);
-            #endregion
-
             //Cat.sid = 100;
             //Cat mimi = new Cat("mimi");
             //Cat pipi = new Cat("pipi");
-
             //bool bol = true;
             //Int32 i = new Int32();
             //int j = 1;
@@ -122,23 +118,6 @@ namespace ConsoleApp1
             //Console.WriteLine(k);
 
             Console.ReadLine();
-        }
-
-        public class Tree
-        {
-            public string Value;
-            public Tree Left;
-            public Tree Right;
-        }
-
-        public static void PreOrder(Tree tree)
-        {
-            if (tree == null)
-                return ;
-            
-            PreOrder(tree.Left);
-            System.Console.WriteLine(tree.Value);
-            PreOrder(tree.Right);
         }
 
         #region 链表
