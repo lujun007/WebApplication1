@@ -84,13 +84,23 @@ namespace ConsoleApp1
             //    int num = random.Next(0, 100);
             //    binaryTree.Add(num);
             //}
+            binaryTree.Add(15);
+            binaryTree.Add(20);
+            binaryTree.Add(10);
             binaryTree.Add(5);
+            binaryTree.Add(18);
             binaryTree.Add(6);
-            binaryTree.Add(7);
+            binaryTree.Add(19);
+            binaryTree.Add(17);
             binaryTree.Add(4);
-            binaryTree.Add(3);
 
             binaryTree.Preorder();
+
+            Tree tree = binaryTree.Search(4);
+            if (tree != null)
+            {
+                Console.WriteLine(tree.Data);
+            }
             #endregion
 
             #region Hash一致性
