@@ -119,14 +119,14 @@ namespace ConsoleApp1
             //Console.ReadLine();
             #endregion
 
-            //Cat.sid = 100;
-            //Cat mimi = new Cat("mimi");
-            //Cat pipi = new Cat("pipi");
-            //bool bol = true;
-            //Int32 i = new Int32();
-            //int j = 1;
-            //int k = bol ? i : j;
-            //Console.WriteLine(k);
+            Cat.sid = 100;
+            Cat mimi = new Cat("mimi");
+            Cat pipi = new Cat("pipi");
+            bool bol = true;
+            Int32 i = new Int32();
+            int j = 1;
+            int k = bol ? i : j;
+            Console.WriteLine(k);
 
             Console.ReadLine();
         }
