@@ -96,11 +96,13 @@ namespace ConsoleApp1
 
             binaryTree.Preorder();
 
+
             Tree tree = binaryTree.Search(4);
-            if (tree != null)
-            {
-                Console.WriteLine(tree.Data);
-            }
+            //if (tree != null)
+            //{
+            //    Console.WriteLine(tree.Data);
+            //}
+            binaryTree.Delete(4);
             #endregion
 
             #region Hash一致性

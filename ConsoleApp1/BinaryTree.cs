@@ -34,6 +34,7 @@ namespace ConsoleApp1
             //};
             //tree.Right = new Tree() { Value = "C", Right = new Tree() { Value = "F" } };
         }
+
         //public static Tree GetTree()
         //{
         //    if (tree == null)
@@ -115,6 +116,7 @@ namespace ConsoleApp1
             return node;
         }
 
+        #region 遍历
         /// <summary>
         /// 先需遍历
         /// 先根节点，然后左节点，后右节点
@@ -209,6 +211,60 @@ namespace ConsoleApp1
                     }
                 }
             }
+        }
+        #endregion
+
+        /// <summary>
+        /// 删除节点
+        /// </summary>
+        public void Delete(int value)
+        {
+            Tree node=tree;
+            Tree father = null;
+            Tree current = null;
+            while (true)
+            {
+                if (value < node.Data)
+                {
+                    if (node.Left == null)
+                        break;
+                    father = node;
+                    node = node.Left;
+                }
+                else if (value > node.Data)
+                {
+                    if (node.Right == null)
+                        break;
+                    father = node;
+                    node = node.Right;
+                }
+                else
+                {
+                    current = node;
+                    break;
+                }
+            }
+            ////如果被删除的节点,没有子节点
+            //if (cureent.Left == null && cureent.Right == null)
+            //{
+            //    //tree = new Tree();//直接清空
+            //    cureent = null;
+            //}
+            ////如果被删除的节点,只有左节点
+            //if (cureent.Left != null && cureent.Right == null)
+            //{
+            //    node = node.Left;
+            //}
+            ////如果被删除的节点，只有右节点
+            //if (cureent.Left == null && cureent.Right != null)
+            //{
+            //    cureent = node.Right;
+            //}
+            ////如果被删除的节点，子节点都有
+            //if (cureent.Left != null && cureent.Right != null)
+            //{
+
+            //}
         }
     }
 }
