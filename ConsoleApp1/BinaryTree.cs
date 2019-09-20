@@ -244,27 +244,71 @@ namespace ConsoleApp1
                     break;
                 }
             }
-            ////如果被删除的节点,没有子节点
-            //if (cureent.Left == null && cureent.Right == null)
-            //{
-            //    //tree = new Tree();//直接清空
-            //    cureent = null;
-            //}
-            ////如果被删除的节点,只有左节点
-            //if (cureent.Left != null && cureent.Right == null)
-            //{
-            //    node = node.Left;
-            //}
-            ////如果被删除的节点，只有右节点
-            //if (cureent.Left == null && cureent.Right != null)
-            //{
-            //    cureent = node.Right;
-            //}
-            ////如果被删除的节点，子节点都有
-            //if (cureent.Left != null && cureent.Right != null)
-            //{
-
-            //}
+            if (current.Data != 0)
+            {
+                //如果被删除的节点,没有子节点
+                if (current.Left == null && current.Right == null)
+                {
+                    if (father.Left.Data == current.Data)//被删除的值在父节点的左边
+                    {
+                        father.Left = null;
+                    }
+                    else if (father.Right.Data == current.Data)//被删除的值在父节点的右边+
+                    {
+                        father.Right = null;
+                    }
+                }
+                //如果被删除的节点,只有左节点
+                if (current.Left != null && current.Right == null)
+                {
+                    if (father.Left.Data == current.Data)
+                    {
+                        father.Left = current.Left;
+                    }
+                    else if (father.Right.Data == current.Data)
+                    {
+                        father.Right = current.Left;
+                    }
+                }
+                //如果被删除的节点，只有右节点
+                if (current.Left == null && current.Right != null)
+                {
+                    if (father.Left.Data == current.Data)
+                    {
+                        father.Left = current.Right;
+                    }
+                    else if (father.Right.Data == current.Data)
+                    {
+                        father.Right = current.Right;
+                    }
+                }
+                //如果被删除的节点，子节点都有
+                if (current.Left != null && current.Right != null)
+                {
+                    if (father.Left.Data == current.Data)
+                    {
+                        Tree newTree = current.Right;
+                        while (newTree.Left != null)
+                        {
+                            newTree = newTree.Left;
+                        }
+                        current = newTree;
+                        current.Left = node.Left;
+                        father.Left = current;
+                    }
+                    else if (father.Right.Data == current.Data)
+                    {
+                        Tree newTree = current.Right;
+                        while (newTree.Left != null)
+                        {
+                            newTree = newTree.Left;
+                        }
+                        current = newTree;
+                        current.Left = node.Left;
+                        father.Right = current;
+                    }
+                }
+            }
         }
     }
 }

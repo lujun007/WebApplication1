@@ -93,7 +93,9 @@ namespace ConsoleApp1
             binaryTree.Add(19);
             binaryTree.Add(17);
             binaryTree.Add(4);
-
+            binaryTree.Add(12);
+            //binaryTree.Add(11);
+            binaryTree.Add(13);
             binaryTree.Preorder();
 
 
@@ -102,7 +104,9 @@ namespace ConsoleApp1
             //{
             //    Console.WriteLine(tree.Data);
             //}
-            binaryTree.Delete(4);
+            //binaryTree.Delete(4);
+            //binaryTree.Delete(12);
+            binaryTree.Delete(20);
             #endregion
 
             #region Hash一致性
@@ -121,14 +125,14 @@ namespace ConsoleApp1
             //Console.ReadLine();
             #endregion
 
-            Cat.sid = 100;
-            Cat mimi = new Cat("mimi");
-            Cat pipi = new Cat("pipi");
-            bool bol = true;
-            Int32 i = new Int32();
-            int j = 1;
-            int k = bol ? i : j;
-            Console.WriteLine(k);
+            //Cat.sid = 100;
+            //Cat mimi = new Cat("mimi");
+            //Cat pipi = new Cat("pipi");
+            //bool bol = true;
+            //Int32 i = new Int32();
+            //int j = 1;
+            //int k = bol ? i : j;
+            //Console.WriteLine(k);
 
             Console.ReadLine();
         }
