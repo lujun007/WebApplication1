@@ -19,8 +19,8 @@ namespace WebApplication1.Controllers
 {
     public class IndexController : ApiController
     {
-        public static string accessKeyId = "LTAIpWMb5wH6dFEj";
-        public static string accessKeySecret = "uFwYh7Eb3thhsYwb77ASZPFaCDSLe0";
+        public static string accessKeyId = "";
+        public static string accessKeySecret = "";
         public static string endpoint = "oss-cn-beijing.aliyuncs.com";
         private static OssClient client;
 
